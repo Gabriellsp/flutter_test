@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_tests/app_module.dart';
+import 'package:flutter_tests/app_widget.dart';
 
 void main() {
-  runApp(MaterialApp(
-    title: 'Flutter Test + Clean Archtecture',
-    theme: ThemeData(
-      primarySwatch: Colors.blueGrey,
-      visualDensity: VisualDensity.adaptivePlatformDensity,
-    ),
-    home: Container(),
-  ));
+  runApp(ModularApp(module: AppModule(), child: const AppWidget()));
 }
